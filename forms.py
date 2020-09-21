@@ -23,6 +23,18 @@ class VenueForm(Form):
     city = StringField(
         'city', validators=[DataRequired()]
     )
+    image_link = StringField(
+        'image_link'
+    )
+    website = StringField(
+        'website'
+    )
+    description = StringField('Description')
+    talent = SelectField(
+        'state',
+        choices=[
+            ('1', 'Yes'),
+            ('0', 'No'),])
     state = SelectField(
         'state', validators=[DataRequired()],
         choices=[
@@ -85,9 +97,6 @@ class VenueForm(Form):
     phone = StringField(
         'phone'
     )
-    image_link = StringField(
-        'image_link'
-    )
     genres = SelectMultipleField(
         # TODO implement enum restriction
         'genres', validators=[DataRequired()],
@@ -124,6 +133,18 @@ class ArtistForm(Form):
     city = StringField(
         'city', validators=[DataRequired()]
     )
+    image_link = StringField(
+        'image_link'
+    )
+    website = StringField(
+        'website'
+    )
+    description = StringField('Description')
+    talent = SelectField(
+        'state',
+        choices=[
+            ('1', 'Yes'),
+            ('0', 'No'),])
     state = SelectField(
         'state', validators=[DataRequired()],
         choices=[
